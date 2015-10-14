@@ -26,6 +26,11 @@ A Java chronometer.
     </repositories>
 
 
+#### Direct download:
+
+  http://crisstanza.github.io/jchron/repository/io/github/crisstanza/jchron/1.0/jchron-1.0.jar
+
+
 #### See also:
 
   https://github.com/crisstanza/jchron-user
