@@ -14,18 +14,18 @@ import javax.swing.text.NumberFormatter;
  */
 public final class JChron {
 
-	private static final double _1000_0_x_60_x_60 = 36000000; // 1000.0 * 60 * 60;
-	private static final double _1000_0_x_60 = 600000; // 1000.0 * 60;
-	private static final double _1000_0 = 1000; // 1000.0 * 60;
+	private static final float _1000_0_x_60_x_60 = 3600000; // 1000.0 * 60 * 60;
+	private static final float _1000_0_x_60 = 60000; // 1000.0 * 60;
+	private static final float _1000_0 = 1000; // 1000.0 * 60;
 
 	private static final String EMPTY = "", S = "s";
 	private static final int ONE = 1;
 
-	private static final String FORMAT_DEC_3 = "#,##0.000";
+	private static final String FORMAT_DEC_3 = "#,##0.###";
 	private static final Locale DEFAULT_LOCALE = new Locale("en", "US");
 	private static final DecimalFormatSymbols DEFAULT_DECIMAL_FORMAT_SYMBOLS = new DecimalFormatSymbols(DEFAULT_LOCALE);
 
-	private static final String READ_FORMAT_HMS = "[ %s h%s %s min%s %s sec%s ]";
+	private static final String READ_FORMAT_HMS = "[ %s hour%s %s min%s %s sec%s ]";
 	private static final String READ_FORMAT_MS = "[ %s min%s %s sec%s ]";
 	private static final String READ_FORMAT_S = "[ %s sec%s ]";
 
@@ -62,7 +62,7 @@ public final class JChron {
 		remainder %= _1000_0_x_60_x_60;
 		final long mins = (long) (remainder / _1000_0_x_60);
 		remainder %= _1000_0_x_60;
-		final double secs = remainder / _1000_0;
+		final float secs = remainder / _1000_0;
 		try {
 			if (hours > 0) {
 				return format(READ_FORMAT_HMS, hours, plural(hours), mins, plural(mins), dec3(secs), plural(secs));
@@ -76,11 +76,11 @@ public final class JChron {
 		}
 	}
 
-	private static final String plural(final double n) {
+	private static final String plural(final float n) {
 		return n == ONE ? EMPTY : S;
 	}
 
-	private static final String dec3(final double n) throws Exception {
+	private static final String dec3(final float n) throws Exception {
 		return new NumberFormatter(new DecimalFormat(FORMAT_DEC_3, DEFAULT_DECIMAL_FORMAT_SYMBOLS)).valueToString(n);
 	}
 
