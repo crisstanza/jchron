@@ -54,10 +54,10 @@ public final class JChron {
 
 	public final String read() {
 		final long remainder = (estatus == STOP ? stop : new Date()).getTime() - start.getTime();
-		return remainder(remainder);
+		return JChron.remainder(remainder);
 	}
 
-	public final String remainder(long remainder) {
+	public static final String remainder(long remainder) {
 		final long hours = (long) (remainder / _1000_0_x_60_x_60);
 		remainder %= _1000_0_x_60_x_60;
 		final long mins = (long) (remainder / _1000_0_x_60);
