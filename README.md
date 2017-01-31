@@ -9,7 +9,7 @@ JChron maven repository.
         <dependency>
             <groupId>io.github.crisstanza</groupId>
             <artifactId>jchron</artifactId>
-            <version>1.0</version>
+            <version>1.2</version>
         </dependency>
         ...
     </dependencies>
