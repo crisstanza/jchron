@@ -54,15 +54,15 @@ public final class JChron {
 		return this;
 	}
 
-	public final String readInSeconds() {
-		return JChron.dec3(this.remainder() / JChron._1000_0);
+	public final Float readInSeconds() {
+		return JChron.flt3(this.remainder() / JChron._1000_0);
 	}
 
 	public final String read() {
 		return JChron.remainder(remainder());
 	}
 
-	private long remainder() {
+	private final long remainder() {
 		return (this.estatus == JChron.STOP ? this.stop : new Date()).getTime() - this.start.getTime();
 	}
 
@@ -91,6 +91,10 @@ public final class JChron {
 		} catch (final Exception exc) {
 			return exc.toString();
 		}
+	}
+
+	private static final Float flt3(final float n) {
+		return Float.parseFloat(dec3(n));
 	}
 
 }
