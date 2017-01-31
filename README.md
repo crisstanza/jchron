@@ -10,7 +10,7 @@ A Java chronometer.
         <dependency>
             <groupId>io.github.crisstanza</groupId>
             <artifactId>jchron</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
         ...
     </dependencies>
@@ -29,8 +29,8 @@ A Java chronometer.
 
 #### Direct download:
 
-  http://crisstanza.github.io/jchron/repository/io/github/crisstanza/jchron/1.1/jchron-1.1.jar
-  http://crisstanza.github.io/jchron/repository/io/github/crisstanza/jchron/1.1/jchron-1.1-sources.jar
+  http://crisstanza.github.io/jchron/repository/io/github/crisstanza/jchron/1.2/jchron-1.2.jar
+  http://crisstanza.github.io/jchron/repository/io/github/crisstanza/jchron/1.2/jchron-1.2-sources.jar
 
 
 ### Previous version:
@@ -39,7 +39,7 @@ A Java chronometer.
         <dependency>
             <groupId>io.github.crisstanza</groupId>
             <artifactId>jchron</artifactId>
-            <version>1.0</version>
+            <version>1.1</version>
         </dependency>
         ...
 
